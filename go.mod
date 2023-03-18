@@ -8,6 +8,11 @@ require (
 )
 
 require (
+	github.com/bendikro/dl v0.0.0-20190410215913-e41fdb9069d4 // indirect
+	github.com/rainycape/dl v0.0.0-20151222075243-1b01514224a1 // indirect
+)
+
+require (
 	fyne.io/systray v1.10.1-0.20230207085535-4a244dbb9d03 // indirect
 	github.com/TheTitanrain/w32 v0.0.0-20200114052255-2654d97dbd3d // indirect
 	github.com/albenik/bcd v0.0.0-20170831201648-635201416bc7 // indirect
@@ -48,4 +53,4 @@ require (
 	honnef.co/go/js/dom v0.0.0-20221001195520-26252dedbe70 // indirect
 )
 
-replace github.com/roffe/gocan => C:\Users\flejd\go\src\github.com\roffe\gocan
+replace github.com/roffe/gocan => ../gocan

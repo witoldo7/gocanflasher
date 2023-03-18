@@ -2,6 +2,7 @@ package gui
 
 import (
 	"fmt"
+	"github.com/roffe/gocan/adapter/passthru"
 	"go.bug.st/serial/enumerator"
 )
 
@@ -23,6 +24,13 @@ func (m *mainWindow) listPorts() []string {
 			m.output(fmt.Sprintf("  USB serial %s", port.SerialNumber))
 			portsList = append(portsList, port.Name)
 		}
+	}
+
+	dlls := passthru.FindDLLs()
+	for _, dll := range dlls {
+		m.output(fmt.Sprintf("J2534 DLL: %s", dll.Name))
+		//portsList = append(portsList, filepath.Base(dll.FunctionLibrary))
+		portsList = append(portsList, dll.Name)
 	}
 
 	state.portList = portsList
